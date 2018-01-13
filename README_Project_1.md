@@ -241,7 +241,7 @@ Then copy and aste the url into your web browser. Be sure to update *localhost* 
 The Jupyter Notebook should open in the browser. 
 
 ###Appendix One:  Schematic of the AWS Infrastructure
-![](/Users/Steven/Desktop/AWS Schematic.png)
+![](https://github.com/seslezak/UCLA-Data-Science/blob/master/AWS%20Schematic.png)
 
 
 
