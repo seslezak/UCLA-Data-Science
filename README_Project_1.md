@@ -235,8 +235,16 @@ The Jupyter Notebook should open in the browser.
 ## Appendix One:  Schematic of the AWS Infrastructure
 ![](https://github.com/seslezak/UCLA-Data-Science/blob/master/Resources/Project_1/AWS%20Schematic.png)
 
+## Appendix Two:  Jupyter Notebook Budget (one month)
 
+The costs for running Jupyter Notebook on three different instances at AWS for one month are as follows:
 
-## Appendix Two:  Jupyter Notebook Budget (one fiscal quarter)
+| Name | vCPUs | Baseline | RAM (GiB) | CPU Credits/Hour | Price/Hour | Price/Month |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| t2.micro | 1 | 10% | 1.0 | 6 | $0.013 | $9.50 | 
+| t2.small | 1 | 20% | 2.0 | 12 | $0.026 | $19.00
+| t2.medium | 2 | 30% | 4.0 | 24 | $0.052 | $38.00 |
 
+Source: https://aws.amazon.com/blogs/aws/low-cost-burstable-ec2-instances/
 
+      
