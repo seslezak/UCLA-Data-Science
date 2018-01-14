@@ -1,14 +1,10 @@
----
-title: 'Documentation for AWS Server Setup'
-author: "Prepared by Steven Slezak"
-date: "14 January 2018"
-output: html_document
----
+# Documentation for AWS Server Setup
+## by Steven Slezak
+## 15 January 2018
 
 The *html* of this RMarkdown file [can be found here.](http://www.rpubs.xxx.xxx.xxx)
 
-
-##Overview 
+## Overview 
 
 This toolkit is designed to serve as documentation for the procedure to set up cloud-based systems on Amazon Web Servics (AWS) for the purpose of running Docker and Jupyter on that platform.  It represents a schema for a data science infrastructure that makes use of AWS, Docker, Jupyter, and R.
 
@@ -40,7 +36,7 @@ Step 7:  Configuring the Jupyter Notebook
 
 Step 8:  Resetting After Stopping AWS
 
-###Step 1: Set Up AWS Account
+## Step 1: Set Up AWS Account
 
 Each user needs to set up an account with Amazon Web Services for access to their cloud system and support.  AWS Documentation for setting up the account can be [found here.](https://docs.aws.amazon.com/lambda/latest/dg/setup.html)  
 
@@ -48,7 +44,7 @@ Each user needs to set up an account with Amazon Web Services for access to thei
 
 It is a good idea to be careful with the AWS identity and security measures you are about to set up.  Best practices for the secure management of AWS resources, including AWS Identity and Access Management (IAM) can be [found here.](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
 
-###Step 2:  Create the *ssh* Key Pair
+## Step 2:  Create the *ssh* Key Pair
 
 The infrastructure we are setting up will allow your local computer communicate with the AWS servers remotely.  In order to do this, you will need to create a secure key pair that will make it possible for the AWS servers to confirm your identity when you open a remote session.  
 
@@ -80,7 +76,7 @@ In either case, copy the entire code from *ssh-rsa* to the end of the string and
 
 Now you have your key pair, go back to AWS to configure the data science system.
 
-###Step 3:  Import the Public Key to AWS
+## Step 3:  Import the Public Key to AWS
 
 Once the AWS account is set up and available, sign into the console and go to the *AWS Services* section.  There, you will find under *All Services* a link for *EC2*.  *EC2* stands for Elastic Compute Cloud.  Click on the *EC2* link and you will be directed to the *EC2* control panel.
 
@@ -90,7 +86,7 @@ You will notice under *Resources* that the *Key Pairs* indicates zero.  Click th
 
 Copy your public key from the text editor and paste it into the *Pbulic key contents* box.  Make sure you capture the entire key.  IF you are satisfied you copied it correctly, click *Import* and you are done.  Don't worry if there is an error.  You can always delete this key and generate a new key pair following the method described above.
 
-###Step 4:  Create a New Security Group
+## Step 4:  Create a New Security Group
 
 Go back to the *EC2* Dashboard and click on *Security Groups*.  You are going to configure this next.
 
@@ -114,7 +110,7 @@ knitr::kable(Table1, caption = "AWS Security Group Settings")
 
 You are now ready to launch the instance.  Click on the *Launch Instance* button to begin.
 
-###Step 5:  Choose Amazon Machine Image (AMI)
+## Step 5:  Choose Amazon Machine Image (AMI)
 
 The first step in launching the new instance is selecting an AMI.  There are many servers available to choose with different operating systems, storage drive types, storage sizes, architectures, and so on.  Some of these are "free tier eligible" meaning they are free for an introductory period and cost very little to operate after that.  These are the simplest and most basic devices.  
 
@@ -136,7 +132,7 @@ Congratulations! Your instance is now running.
 
 Next, you have to connect your local computer to the remote AWS system you just created.
 
-###Step 6:  Configuring the New Instance for Docker
+## Step 6:  Configuring the New Instance for Docker
 
 We use Docker to connect the Jupyter Notebooks to AWS and to manage our AWS server, so we need to configure the AWS instance we just created to work with Docker.  
 
@@ -182,7 +178,7 @@ And check that Docker is in fact running.  The version will display if all is wo
 #      $ docker -v
 ```
 
-###Step 7:  Configuring the Jupyter Notebook
+## Step 7:  Configuring the Jupyter Notebook
 
 Now the system you have set up is ready to connect with Jupyter Notebook.  In this step you will conduct a series of commands to set up Jupyter Notebook and get it to display in a browser.
 
@@ -222,7 +218,7 @@ Notice the phrase *localhost* in the url.  In the browser, delete that phrase an
 
 Hit Enter.  The Jupyter Notebook should open in the browser.  If so, you are good to go.
 
-###Step 8:  Resetting After Stopping AWS
+## Step 8:  Resetting After Stopping AWS
 
 As mentioned earlier, if the AWS server is stopped the existing IP address will not be available when it is started up again.  A new IP address will be issued. This means you have to restart the Jupyter Notebook.  Unfortunately, this is not as simple as pasting the new IP address into the browser bar.  You must repeat a series of commands.  Please follow instructions above for these commands and remember to use the new IP address from AWS and the new passcode string generated in the shell:
 
@@ -240,11 +236,11 @@ Then copy and aste the url into your web browser. Be sure to update *localhost* 
 
 The Jupyter Notebook should open in the browser. 
 
-###Appendix One:  Schematic of the AWS Infrastructure
+## Appendix One:  Schematic of the AWS Infrastructure
 ![](https://github.com/seslezak/UCLA-Data-Science/blob/master/Resources/Project_1/AWS%20Schematic.png)
 
 
 
-###Appendix Two:  Jupyter Notebook Budget (one fiscal quarter)
+## Appendix Two:  Jupyter Notebook Budget (one fiscal quarter)
 
 
