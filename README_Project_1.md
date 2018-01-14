@@ -2,7 +2,7 @@
 ## by Steven Slezak
 ### 15 January 2018
 
-The *html* of this RMarkdown file [can be found here.](http://www.rpubs.xxx.xxx.xxx)
+
 
 ## Overview 
 
