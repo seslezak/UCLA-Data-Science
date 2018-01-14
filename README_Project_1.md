@@ -1,6 +1,6 @@
 # Documentation for AWS Server Setup
 ## by Steven Slezak
-## 15 January 2018
+### 15 January 2018
 
 The *html* of this RMarkdown file [can be found here.](http://www.rpubs.xxx.xxx.xxx)
 
@@ -94,17 +94,15 @@ Click *Create Security Group*.  Give your group a good name and a useful descrip
 
 When you are done your Inbound settings should look something like this:
 
-```{r Table 1, echo = FALSE}
-Table1 <- tibble::tribble(
-        ~"Type", ~"Protocol", ~"Port Range", ~"Source", ~"Description",
-        "SSH", "TCP", 22, "Anywhere", "SSH", 
-        "HTTP", "TCP", 80, "Anywhere", "HTTP",
-        "Custom TCP", "TCP", 8888, "Anywhere", "Jupyter", 
-        "Custom TCP", "TCP", 2376, "Anywhere", "Docker Hub", 
-        "Custom TCP", "TCP", 27016, "Anywhere", "Mongo"
-)
-knitr::kable(Table1, caption = "AWS Security Group Settings")
-```
+
+        | **Type** | **Protocol** | **Port Range** | **Source** | **Description** |
+        | :---: | :---: | :---: | :---: | :---: |
+        | SSH | TCP | 22 | Anywhere | SSH | 
+        | HTTP | TCP | 80 | Anywhere | HTTP |
+        | Custom TCP | TCP | 8888 | Anywhere | Jupyter | 
+        | Custom TCP | TCP | 2376 | Anywhere | Docker Hub | 
+        | Custom TCP | TCP | 27016 | Anywhere | Mongo |
+        
 
 **PRO-TIP**  Don't be alarmed if the settings appear doubled up on the Inbound tab when you are done.  This is not unusual and doesn't impact functioning.
 
