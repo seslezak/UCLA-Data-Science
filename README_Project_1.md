@@ -8,7 +8,7 @@ output: html_document
 The *html* of this RMarkdown file [can be found here.](http://www.rpubs.xxx.xxx.xxx)
 
 
-#Overview
+##Overview 
 
 This toolkit is designed to serve as documentation for the procedure to set up cloud-based systems on Amazon Web Servics (AWS) for the purpose of running Docker and Jupyter on that platform.  It represents a schema for a data science infrastructure that makes use of AWS, Docker, Jupyter, and R.
 
