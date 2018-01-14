@@ -94,16 +94,14 @@ Click *Create Security Group*.  Give your group a good name and a useful descrip
 
 When you are done your Inbound settings should look something like this:
 
-
-        | **Type** | **Protocol** | **Port Range** | **Source** | **Description** |
-        | :---: | :---: | :---: | :---: | :---: |
-        | SSH | TCP | 22 | Anywhere | SSH | 
-        | HTTP | TCP | 80 | Anywhere | HTTP |
-        | Custom TCP | TCP | 8888 | Anywhere | Jupyter | 
-        | Custom TCP | TCP | 2376 | Anywhere | Docker Hub | 
-        | Custom TCP | TCP | 27016 | Anywhere | Mongo |
+| **Type** | **Protocol** | **Port Range** | **Source** | **Description** |
+| :---: | :---: | :---: | :---: | :---: |
+| SSH | TCP | 22 | Anywhere | SSH | 
+| HTTP | TCP | 80 | Anywhere | HTTP |
+| Custom TCP | TCP | 8888 | Anywhere | Jupyter | 
+| Custom TCP | TCP | 2376 | Anywhere | Docker Hub | 
+| Custom TCP | TCP | 27016 | Anywhere | Mongo |
         
-
 **PRO-TIP**  Don't be alarmed if the settings appear doubled up on the Inbound tab when you are done.  This is not unusual and doesn't impact functioning.
 
 You are now ready to launch the instance.  Click on the *Launch Instance* button to begin.
